@@ -16,4 +16,4 @@ Install and activate to show the buttons on the Write panel.
 
 ### Credits
 
-Oleg's suggestion in this [forum post](https://forum.textpattern.com/viewtopic.php?pid=336446#p336446) and the existing Textpattern core.
+Oleg's and Stef's advice in this [forum thread](https://forum.textpattern.com/viewtopic.php?id=52256) and the existing Textpattern core.
