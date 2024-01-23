@@ -7,11 +7,11 @@
 
 if (txpinterface === 'admin') {
     if ($event === 'article') {
-        new jcr_write_nextprev();
+        new jcr_writenav_buttons();
     }
 }
 
-class jcr_write_nextprev
+class jcr_writenav_buttons
 {
     /**
      * Initialise.

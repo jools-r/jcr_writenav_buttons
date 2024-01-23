@@ -1,4 +1,4 @@
-# jcr_write_nextprev
+# jcr_writenav_buttons
 
 Restores next / prev article buttons on Write panel for navigating quickly between adjacent articles.
 
@@ -12,7 +12,7 @@ Install and activate to show the buttons on the Write panel.
 
 ### Changelog
 
--   Version 0.1 -- 2024/01/22 -- First release
+-   Version 0.1 -- 2024/01/23 -- First release
 
 ### Credits
 
