@@ -41,6 +41,13 @@ class jcr_writenav_buttons
 
     protected function article_partial_article_recent_articles($rs)
     {
+        /* Number of recent articles displayed on the Write panel.
+         * This constant can be overridden from the config.php.
+         */
+        if (!defined('WRITE_RECENT_ARTICLES_COUNT')) {
+            define('WRITE_RECENT_ARTICLES_COUNT', 10);
+        }
+
         $recents = safe_rows_start("Title, ID", 'textpattern', "1 = 1 ORDER BY LastMod DESC LIMIT ".(int) WRITE_RECENT_ARTICLES_COUNT);
         $ra = '';
 
