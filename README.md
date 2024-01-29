@@ -1,5 +1,7 @@
 # jcr_writenav_buttons
 
+**For Textpattern v4.9 and greater** (not needed for older versions)
+
 Restores the "recent articles" dropdown and next / prev article buttons on Write panel for navigating quickly between adjacent articles.
 
 The plugin uses a duplicate of the original functions in the Textpattern core (deprecated from v.4.9 onwards) and thus works exactly as earlier Textpattern versions, adding a "recent articles" dropdown and previous and next article buttons at the bottom of the sidebar.
