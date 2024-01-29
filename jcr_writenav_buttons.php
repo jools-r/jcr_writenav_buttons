@@ -20,8 +20,51 @@ class jcr_writenav_buttons
     {
         // Hook into the Write panel callback at end of sidebar
         register_callback(function($event, $step, $pre, $rs) {
+            return $this->article_partial_article_recent_articles($rs);
+        }, 'article_ui', 'extend_col_1', 0);
+
+        register_callback(function($event, $step, $pre, $rs) {
             return $this->article_partial_article_nextprev($rs);
         }, 'article_ui', 'extend_col_1', 0);
+    }
+
+    /**
+     * Renders <ol> list of recent articles.
+     *
+     * The rendered widget can be customised via the 'article_ui > recent_articles'
+     * pluggable UI callback event.
+     *
+     * @param      array $rs Article data
+     * @return     string HTML
+     * @deprecated in 4.9.0
+     */
+
+    protected function article_partial_article_recent_articles($rs)
+    {
+        $recents = safe_rows_start("Title, ID", 'textpattern', "1 = 1 ORDER BY LastMod DESC LIMIT ".(int) WRITE_RECENT_ARTICLES_COUNT);
+        $ra = '';
+
+
+        if ($recents && numRows($recents)) {
+            $ra = '<ol class="recent">';
+
+            while ($recent = nextRow($recents)) {
+                if ($recent['Title'] === '') {
+                    $recent['Title'] = gTxt('untitled').sp.$recent['ID'];
+                }
+
+                $ra .= n.'<li class="recent-article">'.
+                    href(escape_title($recent['Title']), '?event=article'.a.'step=edit'.a.'ID='.$recent['ID']).
+                    '</li>';
+            }
+
+            $ra .= '</ol>';
+        }
+
+        return wrapRegion(
+            'txp-recent-group',
+            tag(pluggable_ui('article_ui', 'recent_articles', $ra, $rs), 'div', array('class' => 'txp-container')),
+            'txp-recent-group-content', 'recent_articles', 'article_recent');
     }
 
     /**
