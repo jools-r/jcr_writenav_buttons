@@ -36,7 +36,9 @@ class jcr_writenav_buttons
      *
      * @param      array $rs Article data
      * @return     string HTML
-     * @deprecated in 4.9.0
+     *
+     * duplicate of built-in article_partial_article_recent_articles($rs) should the
+     * original function be removed from the core (deprecated since v4.9.0)
      */
 
     protected function article_partial_article_recent_articles($rs)
@@ -80,8 +82,8 @@ class jcr_writenav_buttons
      * @param      array $rs Article data
      * @return     string HTML
      *
-     * wholesale duplicate of built-in article_partial_article_nav($rs)
-     * should it someday be removed from the core (status: deprecated in 4.9.0)
+     * duplicate of built-in article_partial_article_nav($rs) should the original
+     * function be removed from the core (deprecated since v4.9.0)
      */
 
     protected function article_partial_article_nextprev($rs)
