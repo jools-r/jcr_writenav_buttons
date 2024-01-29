@@ -1,8 +1,14 @@
 # jcr_writenav_buttons
 
-Restores next / prev article buttons on Write panel for navigating quickly between adjacent articles.
+Restores the "recent articles" dropdown and next / prev article buttons on Write panel for navigating quickly between adjacent articles.
 
-The plugin uses a duplicate of the original function in the Textpattern core (deprecated from v.4.9 onwards) and thus works exactly as earlier Textpattern versions, adding previous and next article buttons at the bottom of the sidebar.
+The plugin uses a duplicate of the original functions in the Textpattern core (deprecated from v.4.9 onwards) and thus works exactly as earlier Textpattern versions, adding a "recent articles" dropdown and previous and next article buttons at the bottom of the sidebar.
+
+You can change the number of recent articles to display by adding the following line to `config.php`, changing `5` to however many articles you wish to see:
+
+```
+define('WRITE_RECENT_ARTICLES_COUNT', 5);
+```
 
 ## Installation
 
@@ -12,6 +18,7 @@ Install and activate to show the buttons on the Write panel.
 
 ### Changelog
 
+-   Version 0.2 -- 2024/01/29 -- Also include "recent articles" dropdown
 -   Version 0.1 -- 2024/01/23 -- First release
 
 ### Credits
