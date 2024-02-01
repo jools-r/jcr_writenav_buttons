@@ -5,6 +5,8 @@
  * A Textpattern CMS plugin for next/prev article buttons on the Write panel.
  */
 
+ global $event;
+
 if (txpinterface === 'admin') {
     if ($event === 'article') {
         new jcr_writenav_buttons();
