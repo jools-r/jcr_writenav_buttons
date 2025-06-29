@@ -74,7 +74,7 @@ class jcr_writenav_buttons
 
         return wrapRegion(
             'txp-recent-group',
-            tag(pluggable_ui('article_ui', 'recent_articles', $ra, $rs), 'div', array('class' => 'txp-container')),
+            pluggable_ui('article_ui', 'recent_articles', $ra, $rs),
             'txp-recent-group-content', 'recent_articles', 'article_recent');
     }
 
