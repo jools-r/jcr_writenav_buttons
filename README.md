@@ -20,6 +20,7 @@ Install and activate to show the buttons on the Write panel.
 
 ### Changelog
 
+-   Version 0.2.1 -- 2025/06/29 -- Minor fix: properly reinstate on article save
 -   Version 0.2 -- 2024/01/29 -- Also include "recent articles" dropdown
 -   Version 0.1 -- 2024/01/23 -- First release
 
